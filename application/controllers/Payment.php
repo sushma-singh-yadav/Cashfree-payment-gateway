@@ -21,8 +21,8 @@ public function checkout()
 	$mode = "TEST"; //<------------ Change to TEST for test server, PROD for production
 
 //extract($_POST);
-  $secretKey = "609cb73e0e762f4a8943b4de61ad9b1649105723";
-  $appId='483451a04623719bf7c5a6e2054384';
+  $secretKey = "your secret key";
+  $appId='your app id';
   $orderId='Order'.rand(0,100);
   $orderAmount=$this->input->post('price');
   $customerName=$this->input->post('customer_name');
@@ -62,7 +62,7 @@ $this->load->view('payment-checkout',['postData'=>$postData,'signature'=>$signat
 }
 public function payment_status()
 {
-      $secretkey = "609cb73e0e762f4a8943b4de61ad9b1649105723";
+      $secretkey = "your secret key";
      $orderId = $_POST["orderId"];
      $orderAmount = $_POST["orderAmount"];
      $referenceId = $_POST["referenceId"];
